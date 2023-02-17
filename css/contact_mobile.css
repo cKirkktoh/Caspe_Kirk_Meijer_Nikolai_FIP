@@ -17,16 +17,10 @@ body {
     color: #fff;
 }
 
-header {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 0;
-  }
-  
-  nav {
-    margin-left: auto;
-    margin-right: 50px;
   }
   
   nav ul {
@@ -35,20 +29,57 @@ header {
   }
   
   nav li {
-    margin-left: 32px;
+    margin-right: 20px;
   }
   
-  nav a {
-    text-decoration: none;
-    color: #1b1e21;
-    font-weight: bold;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: color 0.2s ease-in-out;
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 24px;
   }
   
-  nav a:hover {
-    color: #fbb03b;
+  .hamburger-box {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+  
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color: #1b1e21;
+    border-radius: 4px;
+    position: absolute;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+  
+  .hamburger-inner::before {
+    top: -8px;
+  }
+  
+  .hamburger-inner::after {
+    bottom: -8px;
+  }
+  
+  nav.nav-hidden ul {
+    display: none;
   }
 
   footer {
