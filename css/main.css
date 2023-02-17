@@ -208,7 +208,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #1b1e21, #0d0e10), url('../images/contact.jpg') center/cover no-repeat;
+    background: linear-gradient(to bottom right, #e27b1a, #ff0442), url('../images/contact.jpg') center/cover no-repeat;
+  }
+
+  #contact h2 {
+    margin-left: 100px;
+  }
+
+  #contact label {
+    color: #1b1e21;
+    font-size: 24px;
   }
   
   #contact form {
@@ -254,5 +263,5 @@ footer {
   }
   
   #contact button:hover {
-    background-color: #d2d2d2;
+    background-color: #f8b45a;
   }
