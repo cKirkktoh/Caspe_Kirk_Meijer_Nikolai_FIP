@@ -383,6 +383,7 @@ footer {
     background-color: #FFAF1E;
   }
 
+  /* Mobile Size */
   @media only screen and (max-width: 428px) {
 
     header {
@@ -546,43 +547,44 @@ footer {
       line-height: 1.5;
       width: 400px;
     }
+    /* Products Page*/
+.product-container {
+  display: block;
+}
 
-    .product-container {
-      display: block;
-      }
-      
-      .product3 {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 10px;
-      }
-      
-      /* Remove the alternating direction */
-      .product3:nth-child(even) {
-      flex-direction: column;
-      }
-      
-      .product3 img {
-      max-width: 100%;
-      height: auto;
-      }
-      
-      .product3 .product-description {
-      margin-left: 0;
-      margin-right: 0;
-      opacity: 1;
-      }
-      
-      /* Hide the description by default on smaller screens */
-      .product3 .product-description {
-      opacity: 0;
-      }
-      
-      /* Change the hover effect on smaller screens */
-      .product3:hover .product-description {
-      opacity: 1;
-      }
+.product3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to the center */
+  margin-bottom: 10px;
+}
 
+/* Remove the alternating direction */
+.product3:nth-child(even) {
+  flex-direction: column;
+}
+
+.product3 img {
+  max-width: 80%;
+  height: auto;
+}
+
+.product3 .product-description {
+  margin: 20px;
+  margin-bottom: 50px;
+  opacity: 1;
+}
+
+/* Hide the description by default on smaller screens */
+.product3 .product-description {
+  opacity: 0;
+}
+    
+    /* Change the hover effect on smaller screens */
+    .product3 .product-description {
+      opacity: 1;
+    }
+      /* Contact Page*/
       #contact {
         height: auto;
         padding: 32px;
@@ -612,9 +614,259 @@ footer {
       #contact button {
         font-size: 20px;
         border-radius: 24px;
-      }
-    
-    
+      } 
+    }
+
+
+/* Tablet Size Page */
+
+@media only screen and (min-width: 1024px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
   }
 
- 
+  header img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  nav {
+    margin: 0;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  #main-nav button {
+    display: block;
+    margin: 20px auto;
+  }
+
+  #main-nav ul li {
+    border: none;
+  }
+
+  #main-nav button {
+    width: 20px;
+    height: 20px;
+    background: url(../images/burger.svg) no-repeat center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: all .5s ease;
+    border: 0;
+  }
+
+  #main-nav button.expanded {
+    transform: rotate(90deg);
+  }
+
+  #burger-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  #burger-con.slide-toggle {
+    display: block;
+  }
+
+  #main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #main-nav ul li a {
+    display: block;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: #1b1e21;
+  }
+
+  #main-nav ul li a:hover {
+    color: #FFAF1E;
+  }
+
+  #main-nav ul li {
+    border-bottom: 1px solid #efefef;
+  }
+
+  #main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+  }
+
+  #main-nav ul li:last-child {
+    margin-bottom: 10px;
+  }
+
+  /* Hero section styles */
+  #hero {
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  #hero h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  #hero p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 2rem;
+  }
+
+  /* Products section styles */
+  #products ul {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #products li {
+    width: 300px;
+    margin: 1rem;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  #products li img {
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  #products li h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  #products li p {
+    font-size: 16px;
+    margin-bottom: 16px;
+    max-width: 200px;
+  }
+
+  #products li button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 2rem;
+  }
+
+  /* About styles */
+  .team-member h2 {
+    padding: 10px;
+    font-size: 24px;
+  }
+  
+  .team-member-image {
+    width: 200px;
+    height: 200px;
+    margin-top: 32px;
+  }
+
+  .team-member-bio {
+    padding: 10px;
+    border: 5px solid #FFAF1E;
+    background-color: rgba(246, 146, 30, 0.4);
+    font-size: 20px;
+    line-height: 1.5;
+    width: 800px;
+  }
+
+  /* Products Page*/
+  .product-container {
+    display: block;
+  }
+  
+  .product3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  /* Add alternating direction */
+  .product3:nth-child(even) .product-image {
+    order: 2;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  
+  .product3:nth-child(odd) .product-image {
+    order: 1;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  
+  .product3 img {
+    max-width: 35%; /* change max-width to 30% */
+    height: auto;
+  }
+  
+  .product3 .product-description {
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 50px;
+    opacity: 1;
+  }
+  
+  /* Hide the description by default on smaller screens */
+  .product3 .product-description {
+    opacity: 0;
+  }
+  
+  /* Change the hover effect on smaller screens */
+  .product3 .product-description {
+    opacity: 1;
+  }
+
+    /* Contact Page */
+    #contact {
+      height: auto;
+      padding: 32px;
+    }
+  
+    #contact h2 {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    #contact form {
+      display: block;
+      padding: 32px;
+      max-width: 500px;
+    }
+  
+    #contact label {
+      font-size: 20px;
+    }
+  
+    #contact input,
+    #contact textarea {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  
+    #contact button {
+      font-size: 20px;
+      border-radius: 24px;
+    }
+  }
