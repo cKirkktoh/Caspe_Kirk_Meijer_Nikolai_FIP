@@ -454,7 +454,7 @@ footer {
     display: block;
     padding: 10px 0 10px 0;
     text-align: center;
-    color: #626262;
+    color: #1b1e21;
  }
  
  #main-nav ul li a:hover {
@@ -596,7 +596,7 @@ footer {
       #contact form {
         display: block;
         padding: 32px;
-        max-width: 500px;
+        max-width: 400px;
       }
       
       #contact label {
