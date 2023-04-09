@@ -21,6 +21,11 @@
     padding: 0 32px;
   }
 
+  .hidden {
+    display: none;
+  }
+
+
   /* Main navigation styles */
 header {
     display: flex;
@@ -60,9 +65,6 @@ header {
     color: #FFAF1E;
   }
   
-  .hamburger {
-    display: none;
-}
 
   /* Hero section styles */
 #hero {
@@ -383,82 +385,93 @@ footer {
 
   @media only screen and (max-width: 428px) {
 
-  /* Main navigation styles */
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    margin-top: 16px;
-    padding: 0;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  nav li {
-    margin-left: 0;
-    margin-top: 16px;
-    text-align: center;
-  }
-
-  nav a {
-    display: block;
-    padding: 12px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: #333;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
-  }
-
-  nav a:hover {
-    background-color: #555;
-  }
-
-  .hamburger {
-    display: block;
-    position: relative;
-    width: 30px;
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header img {
+      width: 150px;
+      height: 150px;
+      margin-top: 20px;
+    }
+  
+    nav {
+      margin: 0;
+      width: 100%;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  
+    #main-nav button {
+      display: block;
+      margin: 20px auto;
+    }
+  
+    #main-nav ul li {
+      border: none;
+    }
+  
+  #main-nav button {
+    width: 20px;
     height: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    background: url(../images/burger.svg) no-repeat center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    transition: all .5s ease;
+    border: 0;
+ }
+ 
+ #main-nav button.expanded {
+    transform: rotate(90deg);
+ }
+ 
+ #burger-con {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+ }
+ 
+ #burger-con.slide-toggle {
+    display: block;
+ }
+ 
+ #main-nav ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  .hamburger:before,
-  .hamburger:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #333;
-    border-radius: 3px;
-    transition: transform 0.2s ease;
-    left: 0;
-    display: none;
-  }
-
-  .hamburger:before {
-    top: 0;
-  }
-
-  .hamburger:after {
-    bottom: 0;
-  }
-
-  .hamburger.active:before {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active:after {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
+ }
+ 
+ #main-nav ul li a {
+    display: block;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    color: #626262;
+ }
+ 
+ #main-nav ul li a:hover {
+  color: #FFAF1E;
+ }
+ 
+ #main-nav ul li {
+    border-bottom: 1px solid #efefef;
+ }
+ 
+ #main-nav ul li:first-child {
+    border-top: 1px solid #efefef;
+ }
+ 
+ #main-nav ul li:last-child {
+    margin-bottom: 10px;
+ }
     
     /* Hero section styles */
     #hero {
@@ -533,5 +546,75 @@ footer {
       line-height: 1.5;
       width: 400px;
     }
+
+    .product-container {
+      display: block;
+      }
+      
+      .product3 {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      }
+      
+      /* Remove the alternating direction */
+      .product3:nth-child(even) {
+      flex-direction: column;
+      }
+      
+      .product3 img {
+      max-width: 100%;
+      height: auto;
+      }
+      
+      .product3 .product-description {
+      margin-left: 0;
+      margin-right: 0;
+      opacity: 1;
+      }
+      
+      /* Hide the description by default on smaller screens */
+      .product3 .product-description {
+      opacity: 0;
+      }
+      
+      /* Change the hover effect on smaller screens */
+      .product3:hover .product-description {
+      opacity: 1;
+      }
+
+      #contact {
+        height: auto;
+        padding: 32px;
+      }
+      
+      #contact h2 {
+        margin-left: 0;
+        text-align: center;
+      }
+      
+      #contact form {
+        display: block;
+        padding: 32px;
+        max-width: 500px;
+      }
+      
+      #contact label {
+        font-size: 20px;
+      }
+      
+      #contact input,
+      #contact textarea {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      
+      #contact button {
+        font-size: 20px;
+        border-radius: 24px;
+      }
+    
+    
   }
-  
+
+ 

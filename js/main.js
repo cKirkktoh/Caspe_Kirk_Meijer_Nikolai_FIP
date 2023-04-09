@@ -38,10 +38,22 @@ buttons.forEach((button) => {
   });
 });
 
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector("nav ul");
+(function(){
+	"use strict";	
+	console.log("fired");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("show");
-});
+	let button = document.querySelector("#button");
+	let burgerCon = document.querySelector("#burger-con");
+
+	function hamburgerMenu() {
+		burgerCon.classList.toggle("slide-toggle");
+		button.classList.toggle("expanded");
+	};
+
+	// let hamburgerMenu = () => {
+	// 	burgerCon.classList.toggle("slide-toggle");
+	// 	button.classList.toggle("expanded");
+	// };
+
+	button.addEventListener("click", hamburgerMenu, false);		
+})();
