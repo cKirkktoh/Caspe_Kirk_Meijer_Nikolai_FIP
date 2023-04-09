@@ -59,6 +59,10 @@ header {
   nav a:hover {
     color: #FFAF1E;
   }
+  
+  .hamburger {
+    display: none;
+}
 
   /* Hero section styles */
 #hero {
@@ -377,117 +381,157 @@ footer {
     background-color: #FFAF1E;
   }
 
-  @media only screen and (max-width: 600px) {
-    header {
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 32px;
-    }
-  
-    header img {
-      width: 150px;
-      height: 150px;
-      margin-bottom: 16px;
-    }
-  
-    nav {
-      margin: 0;
-      text-align: center;
-    }
-  
-    nav li {
-      margin: 0;
-      margin-bottom: 16px;
-    }
-  
-    nav a {
-      font-size: 16px;
-    }
-  
+  @media only screen and (max-width: 428px) {
+
+  /* Main navigation styles */
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+
+  nav a:hover {
+    background-color: #555;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hamburger:before,
+  .hamburger:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+    left: 0;
+    display: none;
+  }
+
+  .hamburger:before {
+    top: 0;
+  }
+
+  .hamburger:after {
+    bottom: 0;
+  }
+
+  .hamburger.active:before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active:after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+    
+    /* Hero section styles */
     #hero {
       height: 600px;
-      align-items: center;
     }
-  
-    #hero .container {
-      text-align: center;
-    }
-  
+    
     #hero h2 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 16px;
     }
-  
+    
     #hero p {
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-  
-    #hero .button {
       font-size: 16px;
-      padding: 12px 32px;
+      margin-bottom: 16px;
+    }
+    
+    .button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 2rem;
     }
   
+    /* Products section styles */
     #products ul {
-      flex-wrap: wrap;
-      justify-content: center;
+      margin-top: 2rem;
     }
   
     #products li {
-      width: 100%;
-      margin-bottom: 32px;
+      padding: 16px;
+      border-radius: 8px;
     }
   
-    #products img {
-      width: 100%;
+    #products li img {
+      margin-bottom: 16px;
+      border-radius: 8px;
     }
   
-    #products h3 {
-      margin-top: 16px;
+    #products li h3 {
+      font-size: 24px;
       margin-bottom: 8px;
     }
-  
-    #products p {
-      margin-bottom: 16px;
-    }
-  
-    #products button {
+    
+    #products li p {
       font-size: 16px;
-      padding: 8px 16px;
-    }
-  
-    .team-member {
-      text-align: center;
-    }
-  
-    .team-member-image {
-      width: 150px;
-      height: 150px;
       margin-bottom: 16px;
+      max-width: 200px;
+    }
+    
+    #products li button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 2rem;
     }
   
-    .team-member-name {
+    /* About styles */
+    .team-member h2 {
+      padding: 10px;
       font-size: 24px;
-      margin-bottom: 16px;
     }
-  
+    
+    .team-member-image {
+      width: 200px;
+      height: 200px;
+      margin-top: 32px;
+    }
+
     .team-member-bio {
-      font-size: 16px;
-      margin-bottom: 32px;
-    }
-  
-    .team-member-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-    }
-  
-    .team-member-button {
-      font-size: 16px;
-      padding: 8px 16px;
-      margin-right: 16px;
-      margin-bottom: 16px;
+      padding: 10px;
+      border: 5px solid #FFAF1E;
+      background-color: rgba(246, 146, 30, 0.4);
+      font-size: 20px;
+      line-height: 1.5;
+      width: 400px;
     }
   }
   
