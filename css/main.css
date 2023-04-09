@@ -376,3 +376,118 @@ footer {
   #contact button:hover {
     background-color: #FFAF1E;
   }
+
+  @media only screen and (max-width: 600px) {
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+  
+    header img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 16px;
+    }
+  
+    nav {
+      margin: 0;
+      text-align: center;
+    }
+  
+    nav li {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  
+    nav a {
+      font-size: 16px;
+    }
+  
+    #hero {
+      height: 600px;
+      align-items: center;
+    }
+  
+    #hero .container {
+      text-align: center;
+    }
+  
+    #hero h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+  
+    #hero p {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+  
+    #hero .button {
+      font-size: 16px;
+      padding: 12px 32px;
+    }
+  
+    #products ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    #products li {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  
+    #products img {
+      width: 100%;
+    }
+  
+    #products h3 {
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+  
+    #products p {
+      margin-bottom: 16px;
+    }
+  
+    #products button {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  
+    .team-member {
+      text-align: center;
+    }
+  
+    .team-member-image {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 16px;
+    }
+  
+    .team-member-name {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+  
+    .team-member-bio {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  
+    .team-member-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+  
+    .team-member-button {
+      font-size: 16px;
+      padding: 8px 16px;
+      margin-right: 16px;
+      margin-bottom: 16px;
+    }
+  }
+  
