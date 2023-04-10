@@ -72,7 +72,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #1b1e21, #0d0e10), url('../images/hero.jpg') center/cover no-repeat;
+    background-image: url('../images/quatro-hero.jpg');
   }
   
   #hero .container {
@@ -125,7 +125,7 @@ header {
 #products ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 32px;
+  gap: 24px;
   list-style: none;
   margin-top: 4rem;
 }
@@ -135,7 +135,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  padding: 28px;
   background-color: rgba(112, 112, 112, 0.8);
   border-radius: 16px;
 }
@@ -177,7 +177,6 @@ header {
 #products li button:hover {
   background-color: #d2d2d2;
 }
-
 
   /* About styles */
 
@@ -327,6 +326,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: #FFF;
+    background-image: url('../images/contact-bg.jpg');
   }
 
   #contact h2 {
